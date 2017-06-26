@@ -72,7 +72,7 @@ $(function(){
 		for (var i = 0; i < users.length; i++) {
 			content += '<li><a href="#">'+users[i].name+'</a></li>'
 		}
-		$("#right_colum ul").html(content) // Evenement du DOM : Modification de  l'HTML dans la balise ul qui se trouve dans la balise qui a pour l'id right_colum
+		$("#right_column ul").html(content) // Evenement du DOM : Modification de  l'HTML dans la balise ul qui se trouve dans la balise qui a pour l'id right_colum
 	});
  
 request.fail(function( jqXHR, textStatus ) { // fauil = echec : Code à effectuer en cas d'echec.
@@ -120,8 +120,12 @@ $(".posts .more > a").click(function(){ // Function se declanche au clock sur la
 	});
 
 
-
-
+// Exo 7 *****************************
+// Lors de la selection d'un utilisateur(click) dans la liste "Category" afficher un console.log de l'email de l'utilisateur
+$("#right_column a").click(function(){
+	event.preventDefault();
+	console.log(users[this].email);
+})
 
 
 
